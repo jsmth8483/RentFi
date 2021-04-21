@@ -3,10 +3,7 @@ package com.example.rentifi.home
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.rentifi.RentiFiApplication
 import com.example.rentifi.database.dao.PropertyDao
-import com.example.rentifi.property.PropertyViewModel
-import java.lang.IllegalArgumentException
 
 class HomeViewModelFactory(private val dataSource: PropertyDao, private val application: Application): ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

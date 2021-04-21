@@ -11,24 +11,11 @@
         android:label="@string/app_name"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_homeFragment_to_loginFragment"
-            app:destination="@id/loginFragment"
-            app:popUpTo="@id/homeFragment"
-            app:popUpToInclusive="true" />
-        <action
             android:id="@+id/action_homeFragment_to_addPropertyFragment"
             app:destination="@id/addPropertyFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.rentifi.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@id/homeFragment"
-            app:popUpTo="@id/homeFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_homeFragment_to_propertyFragment"
+            app:destination="@id/propertyFragment" />
     </fragment>
     <fragment
         android:id="@+id/addPropertyFragment"
@@ -38,6 +25,15 @@
         <action
             android:id="@+id/action_addPropertyFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/propertyFragment"
+        android:name="com.example.rentifi.property.PropertyFragment"
+        android:label="PropertyFragment"
+        tools:layout="@layout/fragment_property">
+        <argument
+            android:name="property"
+            app:argType="com.example.rentifi.database.models.Property" />
     </fragment>
 
 </navigation>
